@@ -1,0 +1,28 @@
+[2020-01-16]
+Notes: Routing with React Router
+
+Two popular React routers: 
+1. React Router
+2. Next.js
+
+Everything in React is a component, even a router is a component. Therfore we create a Router.js file in the component folder.
+
+BrowserRouter is imported from the React Router Dom Package,
+a variant of React Router.
+
+The <switch> tag will try the first route, if it does not match it it will try the second route, still not working then it will fall back to the not found route.
+
+The first route will be exactly on the /
+and what component to render out - component = {StorePicker}.
+
+
+<Route exact path"/" component = {StorePicker}/>
+
+
+The second route will be /store/ 'anything'
+
+The third route will be a catch all for anything that does not make it's way in.
+
+
+
+

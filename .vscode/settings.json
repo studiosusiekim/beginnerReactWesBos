@@ -1,0 +1,12 @@
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "workbench.tree.indent": 4,
+    "editor.insertSpaces": false,
+    "workbench.iconTheme": "vs-minimal",
+    "material-icon-theme.showWelcomeMessage": false,
+    "material-icon-theme.folders.theme": "none"
+}

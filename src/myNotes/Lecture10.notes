@@ -1,0 +1,13 @@
+[2020-01-17]
+Notes: Helper and Utility Functions
+Ideas:
+
+To import a helper function from Helper.js, we need to 'named export' it
+
+[javascript]
+
+import { getFunName } from '../helpers'
+
+[end]
+
+To have a defalt text on an input, we need to use the defaultValue={getFunName()} /> attribute.

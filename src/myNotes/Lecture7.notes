@@ -1,0 +1,25 @@
+[2020-01-14]
+Notes: Passing Dynamic Data with Props
+
+
+
+PROPS are similiar to the attributes in HTML
+<img src="dog.jpg" alt="Dog">
+Attributes src and alt give important additional information 
+
+Props are the way how we get data into the component
+State is the home of the data 
+Props is the car- it helps to get to the end destination
+
+You can name props whatever you want beside the existing HTML tag.
+
+If you want to pass a number or anything but a string as a value of a prop you have to wrap it round wit curly braces age={700}
+
+Dev Tool
+==$0 printing the element you currently clicked
+==$1 second last element you clicked 
+
+React Devtool
+==$r also shows and clicks the component currently benn clicked
+
+Components are like objects and it listed the elements props and the given propsname, in our example tagline. Thats why {this.props.tagline}

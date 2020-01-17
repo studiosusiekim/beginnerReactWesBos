@@ -1,0 +1,4 @@
+[2020-01-15]
+Notes: Stateless Functional Components
+
+If a component only has a render method than we can convert it to a 'Stateless Functional Component'. Using ES6 and implicit return.
