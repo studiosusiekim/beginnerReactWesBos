@@ -1,0 +1,70 @@
+[2020-01-20]
+Notes: Events, Refs and this Binding
+
+React wrapps events in 'Synthetic Events', a cross browser. It ensures you to work in all browsers and devices.
+
+Events in React are written inline (Line22).
+
+The default action of a form is submit the data to the action of the form, or in this example submit it to the same page - means refreshing the page. To prevent reload(Line18).
+
+We are not using server side form handler instead we are handle the submit directly in JavaScript.
+
+[javascript]React
+
+class StorePicker extends React.Component {
+	myInput = React.createRef();
+
+	goToStore(event) // passing the event Object
+		event.preventDefault();
+
+  render() {
+    return (
+      <form className="store-selector" onSubmit={this.goToStore}>
+        <h2>Please Enter A Store</h2>
+        <input 
+					type="text" 
+					ref={this.myInput}
+					required placeholder="Store Name" 
+					defaultValue={getFunName()} 
+				/>
+        <button type="submit">Visit Store →</button>
+      </form>
+    );
+  }
+}
+
+[end]
+
+Ordered list:
+
+1. Get the text from the input
+
+	In React we don't touch the DOM and manually select elements in DOM.
+	ref allows us to reference an actual DOM node on the page.(line26)
+
+	All of the built in methods in React are pointing to the React.Component. To pointing it to class StorePicker we can use the ES6 version: 
+		We bind/reference the method goTostore to this, the StorePicker instance.
+
+[javascript]
+
+	class StorePicker extends React.Component {
+	constructor() {
+		super();
+		this.goToStore = this.goToStore.bind(this);	  
+		}
+	}
+[end]
+
+
+	But instead of using the constructor and declaring a method  (Line17) on the component, we declare a property which is set to a arrow function. The property 'goToStore' is a property on the component and with the arrow function we bind the value of this to StorePicker component.
+
+	To access this inside a custom method we need to use the arrow function syntax below.
+
+[javascript]
+	goToStore = (event) => {
+		console.log(this); // { StorePicker}
+	}
+[end]
+
+2. Change the page to /store/whatever-they-entered
+
