@@ -42,9 +42,13 @@ Ordered list:
 	In React we don't touch the DOM and manually select elements in DOM.
 	ref allows us to reference an actual DOM node on the page.(line26)
 
-	All of the built in methods in React are pointing to the React.Component. To pointing it to class StorePicker we can use the ES6 version: 
-		We bind/reference the method goTostore to this, the StorePicker instance.
+	All of the built in methods in React are pointing to the React.Component. To bind/pointing it to class StorePicker we can use the ES6 version: 
+	
+	Class StorePicker has a constructor defined  within it that calls super(). It uses super()to call the constructor of the parent class, in this case React.Component.
 
+	The constructor is a special method which runs before the class is created.
+
+	Line 54 binds the method goToStore to the instance of the StorePicker object.
 [javascript]
 
 	class StorePicker extends React.Component {
