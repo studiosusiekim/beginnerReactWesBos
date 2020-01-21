@@ -1,0 +1,18 @@
+[2020-01-21]
+Notes: Handling Events
+
+How do we access the Router from another component?
+As the StorePicker component is a child of the router we do have access to all methods we need.
+
+In the React dev tool we see under the StorePicker all the props it has been passed from the parent - React.Component. One of it is history( this.props.history). One of the methods is push.
+
+Line 11 this points to Storepicker.
+
+[javascript]
+const storeName = this.myInput.current.value
+this.props.history.push(`/store/${storeName}`); 
+[end]
+
+
+We are not reloading the page, we use the push state to change the URL. The react router is rerenders the component whichhas been set for the URL in the Router.js.
+
